@@ -1,0 +1,14 @@
+@font-face {
+	font-family: 'christmas';
+	src: url('../assets/fonts/christmas_bell/Christmas_Bell.otf');
+}
+
+* {
+	margin: 0;
+	font-family: christmas;
+	box-sizing: border-box;
+}
+
+body {
+	background: #1f005f;
+}
