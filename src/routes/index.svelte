@@ -71,6 +71,12 @@
 		gap: 1rem;
 		padding: 1rem;
 	}
+	@media (max-width: 768px) {
+		.card-container {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: repeat(25, 500px);
+		}
+	}
 	/* .image-container {
 		position: absolute;
 		top: 50vh;
