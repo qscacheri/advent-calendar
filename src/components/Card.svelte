@@ -6,7 +6,7 @@
 
 <div class="card" class:selected class:wiggle on:click>
 	<!-- <img class="image" class:selected src={`/${day}.png`} alt="" /> -->
-	<div class="image" class:selected />
+	<div class="image" class:selected style={`--image: url(/${day}.png)`} />
 	{#if !selected}
 		<p class="day" class:selected>{day}</p>
 	{/if}
@@ -77,7 +77,7 @@
 	.image.selected {
 		display: block;
 		position: static;
-		background-image: url(/1.png);
+		background-image: var(--image);
 		background-size: cover;
 	}
 </style>
