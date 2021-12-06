@@ -5,8 +5,8 @@
 </script>
 
 <div class="card" class:selected class:wiggle on:click>
-	<!-- <img class="image" class:selected src={`/${day}.png`} alt="" /> -->
-	<div class="image" class:selected style={`--image: url(/${day}.png)`} />
+	<img class="image" class:selected src={`/${day}.png`} alt="" />
+	<!-- <div class="image" class:selected style={`--image: url(/${day}.png)`} /> -->
 	{#if !selected}
 		<p class="day" class:selected>{day}</p>
 	{/if}
@@ -69,7 +69,8 @@
 	.image {
 		display: block;
 		width: 100%;
-		height: 100%;
+		height: auto;
+		max-width: 100%;
 		position: absolute;
 		display: none;
 		transition: all 0.2s ease-in-out;
@@ -77,7 +78,6 @@
 	.image.selected {
 		display: block;
 		position: static;
-		background-image: var(--image);
-		background-size: cover;
+		transform: rotateY(180deg);
 	}
 </style>
