@@ -10,7 +10,7 @@
 	function handleClick(day: number) {
 		const cardDate = new Date(`12/${day}/2021`);
 		const today = new Date();
-		if (true) {
+		if (today >= cardDate) {
 			selectedDay = day;
 		} else {
 			dayShouldWiggle = day;
